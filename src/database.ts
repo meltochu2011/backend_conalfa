@@ -10,7 +10,8 @@ require('dotenv').config();
     port: 5432
 });*/
 
-
+//CUANDO SE TIENE ENTRADA EXTERNA
+/*
 export const pool = new Pool({
     user: 'postgres', 
     host: 'tramway.proxy.rlwy.net',
@@ -20,7 +21,18 @@ export const pool = new Pool({
     ssl : {
         rejectUnauthorized : false
     }
-})
+})*/
+
+export const pool = new Pool({
+    user: 'postgres', 
+    host: 'postgres.railway.internal',
+    password: 'xbMbZeGJHAWbJzvINAmdJLQwsqfMpCoy',
+    database: 'railway',
+    port: 5432,
+    ssl : {
+        rejectUnauthorized : false
+    }
+    })
 
 /*export const pool= new Pool({
     user: 'postgres',
