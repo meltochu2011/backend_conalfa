@@ -29,11 +29,11 @@ app.get('/test', (req, res) => res.json({ hora: new Date().toISOString() }));
 
 
 
-const port = process.env.PORT;
+app.set('port', process.env.PORT || 4000);
 
 const server = require('http').Server(app)
 
-server.listen(port,'0.0.0.0',() => {
+server.listen(app.get('port'),'0.0.0.0',() => {
      
     console.log('Ready, the port is '+app.get('port'))
 
