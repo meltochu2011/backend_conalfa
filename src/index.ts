@@ -36,6 +36,9 @@ server.listen(app.get('port'),'0.0.0.0',() => {
 
 })
 
+app.get('/', (req, res) => res.send('Servidor funcionando'));
+
+
 //app.use(express.static(path.join(__dirname,'public')));
 app.use(cors());
 
