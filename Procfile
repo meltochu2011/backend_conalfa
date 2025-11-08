@@ -1,2 +1,3 @@
-web: npm install && npm run build && npm start
+web: npm install && npx tsc && npm start
+
 
