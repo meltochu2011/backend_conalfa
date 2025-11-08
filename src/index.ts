@@ -11,7 +11,7 @@ import { socket_orders } from './controllers/socket_orders';
 //midelwares
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
-
+const cors = require('cors');
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -27,7 +27,7 @@ app.use(indexRoutes);
 app.get('/', (req, res) => res.send('Servidor funcionando'));
 app.get('/test', (req, res) => res.json({ hora: new Date().toISOString() }));
 
-const cors = require('cors');
+
 
 app.set('port', process.env.PORT || 4000);
 
@@ -38,9 +38,6 @@ server.listen(app.get('port'),'0.0.0.0',() => {
     console.log('Ready, the port is '+app.get('port'))
 
 })
-
-
-
 
 //app.use(express.static(path.join(__dirname,'public')));
 app.use(cors());
