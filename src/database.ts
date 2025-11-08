@@ -24,14 +24,12 @@ export const pool = new Pool({
 })*/
 
 export const pool = new Pool({
-    user: 'postgres', 
-    host: 'postgres.railway.internal',
-    password: 'xbMbZeGJHAWbJzvINAmdJLQwsqfMpCoy',
-    database: 'railway',
-    port: 47828,
-    ssl : {
-        rejectUnauthorized : false
-    }
+    host: process.env.PGHOST,
+  port: Number(process.env.PGPORT),
+  user: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
+  database: process.env.PGDATABASE,
+  ssl: { rejectUnauthorized: false } // si tu DB requiere SSL
     })
 
 /*export const pool= new Pool({
