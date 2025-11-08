@@ -23,6 +23,9 @@ app.use((req, res, next) => {
 
 app.use(indexRoutes);
 
+// Rutas simples para prueba
+app.get('/', (req, res) => res.send('Servidor funcionando'));
+app.get('/test', (req, res) => res.json({ hora: new Date().toISOString() }));
 
 const cors = require('cors');
 
@@ -36,7 +39,7 @@ server.listen(app.get('port'),'0.0.0.0',() => {
 
 })
 
-app.get('/', (req, res) => res.send('Servidor funcionando'));
+
 
 
 //app.use(express.static(path.join(__dirname,'public')));
