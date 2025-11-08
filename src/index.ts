@@ -33,7 +33,7 @@ const port = process.env.PORT;
 
 const server = require('http').Server(app)
 
-server.listen(app.get('port'),'0.0.0.0',() => {
+server.listen(port,'0.0.0.0',() => {
      
     console.log('Ready, the port is '+app.get('port'))
 
