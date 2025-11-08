@@ -29,7 +29,7 @@ app.get('/test', (req, res) => res.json({ hora: new Date().toISOString() }));
 
 
 
-app.set('port', process.env.PORT || 4000);
+const port = process.env.PORT;
 
 const server = require('http').Server(app)
 
