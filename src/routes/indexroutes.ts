@@ -39,7 +39,7 @@ import {ejemplo,/*createGalleryelement,*/
 */
 
 /**TEST */
-router.get('/test',test);
+//router.get('/test',test);
 
 /**INICIO DE QUERIES CONALFA
  * 
