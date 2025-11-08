@@ -28,7 +28,7 @@ export const pool = new Pool({
     host: 'postgres.railway.internal',
     password: 'xbMbZeGJHAWbJzvINAmdJLQwsqfMpCoy',
     database: 'railway',
-    port: 5432,
+    port: 47828,
     ssl : {
         rejectUnauthorized : false
     }
