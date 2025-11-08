@@ -30,7 +30,7 @@ app.set('port', process.env.PORT || 4000);
 
 const server = require('http').Server(app)
 
-server.listen(app.get('port'), () => {
+server.listen(app.get('port'),'0.0.0.0',() => {
      
     console.log('Ready, the port is '+app.get('port'))
 
