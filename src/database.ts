@@ -29,7 +29,9 @@ export const pool = new Pool({
     password: 'xbMbZeGJHAWbJzvINAmdJLQwsqfMpCoy',
     database: 'railway',
     port: 5432,
-   
+    ssl : {
+        rejectUnauthorized : false
+    }
     })
 
 /*export const pool= new Pool({
