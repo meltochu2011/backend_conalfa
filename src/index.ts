@@ -59,7 +59,7 @@ app.use(cors());
 const io= require('socket.io')(server,{
     cors: 
     {
-      origins: ['http://localhost:3002','http://localhost:4200', 'https://joockuu.vercel.app','http://localhost:3000', 'https://back-v9n1.onrender.com','http://localhost:3500']
+      origins: ['http://localhost:3002','http://localhost:4200', 'https://joockuu.vercel.app','http://localhost:3000', 'https://web-production-a522.up.railway.app','http://localhost:3500']
     }
 
 }
