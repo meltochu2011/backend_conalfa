@@ -1,6 +1,6 @@
 import express from 'express'
 import path from 'path'
-const pool = require('./db');// ajusta el path según tu proyecto
+const pool = require('./database');// ajusta el path según tu proyecto
 //import socket from 'socket.io'
 
 const app= express();
