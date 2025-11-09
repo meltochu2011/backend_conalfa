@@ -27,7 +27,19 @@ app.use(indexRoutes);
 app.get('/', (req, res) => res.send('Servidor funcionando'));
 app.get('/test', (req, res) => res.json({ hora: new Date().toISOString() }));
 
+import { pool } from './db'; // ajusta el path según tu proyecto
 
+app.get('/dbcheck', async (req, res) => {
+  try {
+    console.log('Ejecutando consulta a PostgreSQL...');
+    const result = await pool.query('SELECT NOW()');
+    console.log('Resultado DB:', result.rows);
+    res.json({ ok: true, time: result.rows[0].now });
+  } catch (err: any) {
+    console.error('Error en /dbcheck:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
 
 app.set('port', process.env.PORT || 4000);
 
