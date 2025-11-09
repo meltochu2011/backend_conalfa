@@ -1,5 +1,6 @@
 import express from 'express'
 import path from 'path'
+const pool = require('./db');// ajusta el path según tu proyecto
 //import socket from 'socket.io'
 
 const app= express();
@@ -27,7 +28,7 @@ app.use(indexRoutes);
 app.get('/', (req, res) => res.send('Servidor funcionando'));
 app.get('/test', (req, res) => res.json({ hora: new Date().toISOString() }));
 
-import { pool } from './db'; // ajusta el path según tu proyecto
+
 
 app.get('/dbcheck', async (req, res) => {
   try {
