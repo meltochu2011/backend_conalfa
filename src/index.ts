@@ -30,7 +30,7 @@ app.get('/test', (req, res) => res.json({ hora: new Date().toISOString() }));
 
 
 
-app.get('/dbcheck', async (req, res) => {
+/*app.get('/dbcheck', async (req, res) => {
   try {
     console.log('Ejecutando consulta a PostgreSQL...');
     const result = await pool.query('SELECT NOW()');
@@ -40,7 +40,7 @@ app.get('/dbcheck', async (req, res) => {
     console.error('Error en /dbcheck:', err);
     res.status(500).json({ error: err.message });
   }
-});
+});*/
 
 app.set('port', process.env.PORT || 4000);
 
